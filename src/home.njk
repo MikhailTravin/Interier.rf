@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-intro">
+                <img src="img/bg1.webp" alt="" class="block-intro__bg1">
+                <div class="block-intro__circle"></div>
+                <div class="container">
+                    <div class="block-intro__content">
+                        <div class="block-intro__left">
+                            <h1 class="title1">
+                                Реализуем дизайн-проект
+                                <br>
+                                <span>«под ключ»:</span>
+                            </h1>
+                            <p>
+                                Гарантируем фиксированную цену, понятные сроки
+                                и безупречный результат. Мы с вами от первой мысли до финального декора.
+                            </p>
+                        </div>
+                        <div class="block-intro__right">
+                            <div class="block-intro__descr">
+                                <img src="img/image1.webp" alt="">
+                                <div class="block-intro__item">
+                                    <div class="block-intro__name">
+                                        Мы создаем комфортные интерьеры, в которых нравится жить
+                                    </div>
+                                    <a href="./" class="block-intro__link">
+                                        <span>Смотреть кейсы</span>
+                                        <svg aria-hidden="true" width="11" height="12">
+                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="block-intro__buttons">
+                                <a href="./" class="btn btn-white">
+                                    Рассчитать стоимость
+                                </a>
+                                <a href="./" class="block-intro__btn-social">
+                                    <span>Написать в MAX</span>
+                                    <svg aria-hidden="true" width="24" height="22">
+                                        <use xlink:href="img/sprite.svg#max"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-benefits block1">
+                <div class="container">
+                    <div class="heading-complex">
+                        <h2 class="title2">
+                            Почему нас <span>выбирают</span>
+                        </h2>
+                    </div>
+                    <div class="block-benefits__body">
+                        <div class="block-benefits__column">
+                            <div class="block-benefits__number">(01)</div>
+                            <div class="block-benefits__title">
+                                Фиксированная цена - никаких сюрпризов
+                            </div>
+                            <p>
+                                Стоимость проекта определяется и фиксируется в договоре. Вы будете уверены в итоговой
+                                цене без неожиданных дополнительных расходов.
+                            </p>
+                        </div>
+                        <div class="block-benefits__column">
+                            <div class="block-benefits__number">(02)</div>
+                            <div class="block-benefits__title">
+                                Попадание в ваши желания
+                            </div>
+                            <p>
+                                Мы подробно обсуждаем все детали и корректируем оформление, чтобы результат полностью
+                                соответствовал вашим ожиданиям.
+                            </p>
+                        </div>
+                        <div class="block-benefits__column">
+                            <div class="block-benefits__number">(03)</div>
+                            <div class="block-benefits__title">
+                                Ремонт без вашего участия
+                            </div>
+                            <p>
+                                Еженедельные фото/видеоотчеты: мы управляем всеми процессами
+                                и несем ответственность за их качественное исполнение
+                            </p>
+                        </div>
+                        <div class="block-benefits__column">
+                            <div class="block-benefits__number">(04)</div>
+                            <div class="block-benefits__title">
+                                Интерьер в реальности — как в дизайн-проекте
+                            </div>
+                            <p>
+                                Мы тщательно подбираем материалы и комплектацию, чтобы конечный результат полностью
+                                соответствовал предварительному дизайну.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-tariffs block1">
+                <div class="container">
+                    <div class="heading-complex">
+                        <h2 class="title2">
+                            Понятные тарифы,<br>
+                            <span>прозрачные цены</span>
+                        </h2>
+                        <p>
+                            Четыре уровня детализации проекта — от базового с техническим заданием, до максимального с
+                            полным циклом работ и подбором всех товаров. Кликните по тарифу, чтобы узнать точную
+                            стоимость для метража вашего помещения.
+                        </p>
+                    </div>
+                    <div class="block-tariffs__body">
+                        <div class="block-tariffs__column">
+                            <div class="block-tariffs__top">
+                                <div class="block-tariffs__title">
+                                    Эскизный
+                                </div>
+                                <div class="block-tariffs__price">
+                                    2 500 ₽/м²
+                                </div>
+                            </div>
+                            <div class="block-tariffs__buttons">
+                                <a href="./" data-goto=".block-documents" data-goto-header
+                                    class="block-tariffs__button">
+                                    Что входит
+                                </a>
+                                <a href="./" data-check="check-eskiz" data-goto=".block-calculator" data-goto-header
+                                    class="block-tariffs__button-calc">
+                                    <span>Рассчитать проект</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block-tariffs__column">
+                            <div class="block-tariffs__top">
+                                <div class="block-tariffs__title">
+                                    Рабочий
+                                </div>
+                                <div class="block-tariffs__price">
+                                    2 900 ₽/м²
+                                </div>
+                            </div>
+                            <div class="block-tariffs__buttons">
+                                <a href="./" data-goto=".block-documents" data-goto-header
+                                    class="block-tariffs__button">
+                                    Что входит
+                                </a>
+                                <a href="./" data-check="check-worker" data-goto=".block-calculator" data-goto-header
+                                    class="block-tariffs__button-calc">
+                                    <span>Рассчитать проект</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block-tariffs__column column-bg">
+                            <div class="block-tariffs__top">
+                                <div class="block-tariffs__title">
+                                    Максимальный
+                                </div>
+                                <div class="block-tariffs__price">
+                                    4 800 ₽/м²
+                                </div>
+                            </div>
+                            <div class="block-tariffs__buttons">
+                                <a href="./" data-goto=".block-documents" data-goto-header
+                                    class="block-tariffs__button">
+                                    Что входит
+                                </a>
+                                <a href="./" data-check="check-max" data-goto=".block-calculator" data-goto-header
+                                    class="block-tariffs__button-calc">
+                                    <span>Рассчитать проект</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block-tariffs__column">
+                            <div class="block-tariffs__top">
+                                <div class="block-tariffs__title">
+                                    Стандарт
+                                </div>
+                                <div class="block-tariffs__price">
+                                    4 100 ₽/м²
+                                </div>
+                            </div>
+                            <div class="block-tariffs__buttons">
+                                <a href="./" data-goto=".block-documents" data-goto-header
+                                    class="block-tariffs__button">
+                                    Что входит
+                                </a>
+                                <a href="./" data-check="check-standard" data-goto=".block-calculator" data-goto-header
+                                    class="block-tariffs__button-calc">
+                                    <span>Рассчитать проект</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-calculator block1">
+                <img loading="lazy" src="img/bg2.webp" alt="" class="block-calculator__bg1">
+                <div class="container">
+                    <div class="block-calculator__content">
+                        <div class="block-calculator__left">
+                            <h2 class="title2">
+                                Точный расчёт<br>
+                                <span>под ваш метраж</span>
+                            </h2>
+                            <div class="block-calculator__text">
+                                Пакет выбран сверху. Двигайте ползунок площади
+                                и добавляйте опции — получайте честную сумму
+                                за 15 секунд. Без формы и звонка менеджера.
+                            </div>
+                            <ul>
+                                <li>
+                                    <img loading="lazy" src="img/icons/ruble.svg" alt="">
+                                    <p>
+                                        Цена не вырастет после звонка менеджера
+                                    </p>
+                                </li>
+                                <li>
+                                    <img loading="lazy" src="img/icons/tile.svg" alt="">
+                                    <p>
+                                        Видна детализация — за что именно платите
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-calculator__right">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
