@@ -6,6 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<link rel="stylesheet" href="css/fancybox.min.css" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 
@@ -23,6 +24,13 @@
 							<img src="img/icons/logo2.svg" alt="" class="logo2">
 						</a>
 						<div class="header-menu">
+							<div class="header-menu__top">
+								<button type="button" class="header-menu__close">
+									<svg aria-hidden="true" width="18" height="18">
+										<use xlink:href="img/sprite.svg#close"></use>
+									</svg>
+								</button>
+							</div>
 							<ul>
 								<li>
 									<a href="./" data-goto=".block-benefits" data-goto-header>Преимущества</a>
@@ -31,7 +39,7 @@
 									<a href="./" data-goto=".block-tariffs" data-goto-header>Тарифы</a>
 								</li>
 								<li>
-									<a href="./">Работы</a>
+									<a href="./" data-goto=".block-gallery" data-goto-header>Работы</a>
 								</li>
 								<li>
 									<a href="./">Как мы работаем</a>
@@ -55,7 +63,7 @@
 								</a>
 							</div>
 							<a href="tel:74992722200" class="header__phone">+7 (499) 272-22-00</a>
-							<a data-da=".header-menu, 768, last" href="./" class="btn btn-white">Обсудить проект</a>
+							<a data-da=".header-menu__top, 768, first" href="./" class="btn btn-white">Обсудить проект</a>
 							<button class="header__burger">
 								<span class="icon-menu">
 									<span></span>
@@ -99,7 +107,7 @@
 									</div>
 								</div>
 								<div class="block-intro__buttons">
-									<a href="./" class="btn btn-white">
+									<a href="./" data-goto=".block-calculator" data-goto-header class="btn btn-white">
 										Рассчитать стоимость
 									</a>
 									<a href="./" class="block-intro__btn-social">
@@ -190,7 +198,7 @@
 									</div>
 								</div>
 								<div class="block-tariffs__buttons">
-									<a href="./" data-goto=".block-documents" data-goto-header class="block-tariffs__button">
+									<a href="./" class="block-tariffs__button">
 										Что входит
 									</a>
 									<a href="./" data-check="check-eskiz" data-goto=".block-calculator" data-goto-header class="block-tariffs__button-calc">
@@ -208,7 +216,7 @@
 									</div>
 								</div>
 								<div class="block-tariffs__buttons">
-									<a href="./" data-goto=".block-documents" data-goto-header class="block-tariffs__button">
+									<a href="./" class="block-tariffs__button">
 										Что входит
 									</a>
 									<a href="./" data-check="check-worker" data-goto=".block-calculator" data-goto-header class="block-tariffs__button-calc">
@@ -226,7 +234,7 @@
 									</div>
 								</div>
 								<div class="block-tariffs__buttons">
-									<a href="./" data-goto=".block-documents" data-goto-header class="block-tariffs__button">
+									<a href="./" class="block-tariffs__button">
 										Что входит
 									</a>
 									<a href="./" data-check="check-max" data-goto=".block-calculator" data-goto-header class="block-tariffs__button-calc">
@@ -244,7 +252,7 @@
 									</div>
 								</div>
 								<div class="block-tariffs__buttons">
-									<a href="./" data-goto=".block-documents" data-goto-header class="block-tariffs__button">
+									<a href="./" class="block-tariffs__button">
 										Что входит
 									</a>
 									<a href="./" data-check="check-standard" data-goto=".block-calculator" data-goto-header class="block-tariffs__button-calc">
@@ -290,7 +298,8 @@
 									<div class="block-calc__column">
 										<div class="block-calc__top">
 											<div class="block-calc__title">
-												01 / Выберите тип объекта
+												<span class="desc">01 / Выберите тип объекта</span>
+												<span class="mob">01 / Тип объекта</span>
 											</div>
 											<div id="type-object" class="block-calc__result-title">
 												Комм.помещение
@@ -298,7 +307,7 @@
 										</div>
 										<div class="options">
 											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="1" name="option1">
+												<input hidden class="options__input" type="radio" value="1" name="option1" data-target="type-object">
 												<span class="options__label">
 													<span class="options__check">
 														<svg aria-hidden="true" width="15" height="15">
@@ -318,7 +327,7 @@
 												</span>
 											</label>
 											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="2" name="option1">
+												<input hidden class="options__input" type="radio" value="2" name="option1" data-target="type-object">
 												<span class="options__label">
 													<span class="options__check">
 														<svg aria-hidden="true" width="15" height="15">
@@ -334,7 +343,7 @@
 												</span>
 											</label>
 											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="3" name="option1">
+												<input hidden class="options__input" type="radio" value="3" name="option1" data-target="type-object">
 												<span class="options__label">
 													<span class="options__check">
 														<svg aria-hidden="true" width="15" height="15">
@@ -354,7 +363,7 @@
 												</span>
 											</label>
 											<label class="options__item">
-												<input hidden checked class="options__input" type="radio" value="3" name="option1">
+												<input hidden checked class="options__input" type="radio" value="3" name="option1" data-target="type-object">
 												<span class="options__label">
 													<span class="options__check">
 														<svg aria-hidden="true" width="15" height="15">
@@ -378,7 +387,8 @@
 									<div class="block-calc__column block-calc-area">
 										<div class="block-calc__top">
 											<div class="block-calc__title">
-												02 / Введите площадь объекта
+												<span class="desc">02 / Введите площадь объекта</span>
+												<span class="mob">02 / Площадь объекта</span>
 											</div>
 										</div>
 										<div class="block-calc__inputs">
@@ -394,15 +404,16 @@
 									<div class="block-calc__column">
 										<div class="block-calc__top">
 											<div class="block-calc__title">
-												03 / Выберите пакет услуг
+												<span class="desc">03 / Выберите пакет услуг</span>
+												<span class="mob">03 / Пакет</span>
 											</div>
-											<div id="type-object" class="block-calc__result-title">
+											<div id="package-result" class="block-calc__result-title">
 												Максимальный/4 800 ₽/м²
 											</div>
 										</div>
 										<div class="options options-package">
 											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="1" name="option2">
+												<input hidden data-check="check-eskiz" class="options__input" type="radio" value="1" name="option2" data-target="package-result">
 												<span class="options__label">
 													<span class="options__top">
 														<span class="options__text">
@@ -416,13 +427,13 @@
 													</span>
 													<span class="options__bottom">
 														<span class="options__price">2 500 ₽/м²</span>
-														<span class="options__info">
-															<span class="options__info-icon">
+														<span class="block-info">
+															<span class="block-info__icon">
 																<svg aria-hidden="true" width="15" height="15">
 																	<use xlink:href="img/sprite.svg#info"></use>
 																</svg>
 															</span>
-															<span class="options__info-text">
+															<span class="block-info__text">
 																Lorem ipsum dolor sit amet consectetur adipisicing elit.
 																Molestias, neque.
 															</span>
@@ -431,7 +442,7 @@
 												</span>
 											</label>
 											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="2" name="option2">
+												<input hidden data-check="check-worker" class="options__input" type="radio" value="2" name="option2" data-target="package-result">
 												<span class="options__label">
 													<span class="options__top">
 														<span class="options__text">
@@ -445,13 +456,13 @@
 													</span>
 													<span class="options__bottom">
 														<span class="options__price">2 900 ₽/м²</span>
-														<span class="options__info">
-															<span class="options__info-icon">
+														<span class="block-info">
+															<span class="block-info__icon">
 																<svg aria-hidden="true" width="15" height="15">
 																	<use xlink:href="img/sprite.svg#info"></use>
 																</svg>
 															</span>
-															<span class="options__info-text">
+															<span class="block-info__text">
 																Lorem ipsum dolor sit amet consectetur adipisicing elit.
 																Molestias, neque.
 															</span>
@@ -460,7 +471,7 @@
 												</span>
 											</label>
 											<label class="options__item">
-												<input hidden class="options__input" checked type="radio" value="3" name="option2">
+												<input hidden data-check="check-max" class="options__input" checked type="radio" value="3" name="option2" data-target="package-result">
 												<span class="options__label">
 													<span class="options__top">
 														<span class="options__text">
@@ -474,13 +485,13 @@
 													</span>
 													<span class="options__bottom">
 														<span class="options__price">4 800 ₽/м²</span>
-														<span class="options__info">
-															<span class="options__info-icon">
+														<span class="block-info">
+															<span class="block-info__icon">
 																<svg aria-hidden="true" width="15" height="15">
 																	<use xlink:href="img/sprite.svg#info"></use>
 																</svg>
 															</span>
-															<span class="options__info-text">
+															<span class="block-info__text">
 																Lorem ipsum dolor sit amet consectetur adipisicing elit.
 																Molestias, neque.
 															</span>
@@ -489,7 +500,7 @@
 												</span>
 											</label>
 											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="4" name="option2">
+												<input hidden data-check="check-standard" class="options__input" type="radio" value="4" name="option2" data-target="package-result">
 												<span class="options__label">
 													<span class="options__top">
 														<span class="options__text">
@@ -503,13 +514,13 @@
 													</span>
 													<span class="options__bottom">
 														<span class="options__price">4 100 ₽/м²</span>
-														<span class="options__info">
-															<span class="options__info-icon">
+														<span class="block-info">
+															<span class="block-info__icon">
 																<svg aria-hidden="true" width="15" height="15">
 																	<use xlink:href="img/sprite.svg#info"></use>
 																</svg>
 															</span>
-															<span class="options__info-text">
+															<span class="block-info__text">
 																Lorem ipsum dolor sit amet consectetur adipisicing elit.
 																Molestias, neque.
 															</span>
@@ -519,11 +530,689 @@
 											</label>
 										</div>
 									</div>
+									<div class="block-calc__column">
+										<div class="block-calc-add">
+											<div class="block-calc-add__top">
+												<div class="block-calc-add__title">
+													Добавить в проект нашу заботу:
+												</div>
+												<span class="block-info">
+													<span class="block-info__icon">
+														<svg aria-hidden="true" width="15" height="15">
+															<use xlink:href="img/sprite.svg#info"></use>
+														</svg>
+													</span>
+													<span class="block-info__text">
+														Lorem ipsum dolor sit amet consectetur adipisicing elit.
+														Molestias, neque.
+													</span>
+												</span>
+											</div>
+											<div class="block-calc-add__switch">
+												<div class="block-calc-add__switch-text">
+													Подбор товаров и материалов для ремонта БЕСПЛАТНО
+												</div>
+												<label class="toggle-switch">
+													<input type="checkbox">
+													<span class="toggle-switch__background">
+														<span class="toggle-switch__handle"></span>
+													</span>
+												</label>
+											</div>
+											<div class="block-calc-add__checkbox">
+												<label class="checkbox">
+													<input class="checkbox__input" type="checkbox" value="1" name="checkbox1">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<svg aria-hidden="true" width="9" height="7">
+																<use xlink:href="img/sprite.svg#check1"></use>
+															</svg>
+														</span>
+														<span class="checkbox__text">
+															Подбор товаров и материалов для ремонта БЕСПЛАТНО
+														</span>
+													</span>
+												</label>
+												<span class="block-info">
+													<span class="block-info__icon">
+														<svg aria-hidden="true" width="17" height="17">
+															<use xlink:href="img/sprite.svg#info"></use>
+														</svg>
+													</span>
+													<span class="block-info__text">
+														Lorem ipsum dolor sit amet consectetur adipisicing elit.
+														Molestias, neque.
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="block-calc__right">
-
+								<div class="block-calc-right">
+									<div class="block-calc-right__title">
+										Итоговый расчет:
+									</div>
+									<ul>
+										<li>
+											<div class="block-calc-right__icon">
+												<img loading="lazy" src="img/icons/building2.svg" alt="">
+											</div>
+											<div class="block-calc-right__titles">
+												<span>Тип объекта:</span>
+												Коммерческая недвижимость
+											</div>
+										</li>
+										<li>
+											<div class="block-calc-right__icon">
+												<img loading="lazy" src="img/icons/area.svg" alt="">
+											</div>
+											<div class="block-calc-right__titles">
+												<span>Площадь</span>
+												170 м²
+											</div>
+										</li>
+										<li>
+											<div class="block-calc-right__icon">
+												<img loading="lazy" src="img/icons/packpages.svg" alt="">
+											</div>
+											<div class="block-calc-right__titles">
+												<span>Пакет</span>
+												Максимальный / 4 800 ₽/м²
+											</div>
+										</li>
+									</ul>
+									<div class="block-calc-right__total">
+										<div class="block-calc-right__total-title">
+											Итого за дизайн-проект:
+										</div>
+										<div class="block-calc-right__summ">
+											1 663 750 ₽
+										</div>
+									</div>
+									<button type="submit" class="btn btn-bordovy">
+										<span class="desc">Зафиксировать цену</span>
+										<span class="mob">Зафиксировать цену и оставить заявку</span>
+									</button>
+									<div class="block-calc-right__text">
+										<div class="block-calc-right__icon-text">
+											<svg aria-hidden="true" width="20" height="22">
+												<use xlink:href="img/sprite.svg#check3"></use>
+											</svg>
+										</div>
+										<span>Цена не изменится после звонка менеджера.
+											Зафиксируем в договоре.</span>
+									</div>
 								</div>
 							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-gallery block1">
+					<div class="container">
+						<div class="heading-complex">
+							<h2 class="title2">
+								<div class="desc">
+									Реальные кейсы
+									<br>
+									<span>с именами, бюджетами и историей.</span>
+								</div>
+								<div class="mob">
+									Реальные кейсы,<br>
+									<span>с именами и бюджетами</span>
+								</div>
+							</h2>
+							<div data-da=".block-gallery__body, 992, last" class="slider-nav">
+								<div class="slider-nav__arrow-prev slider-nav-arrow block-gallery-arrow-prev">
+									<svg aria-hidden="true" width="5" height="11">
+										<use xlink:href="img/sprite.svg#arrow2"></use>
+									</svg>
+								</div>
+								<div class="slider-nav__pagination-fraction block-gallery-pagination-fraction">
+									<span class="swiper-pagination-current">2</span>
+									/
+									<span class="swiper-pagination-total">5</span>
+								</div>
+								<div class="slider-nav__arrow-next slider-nav-arrow block-gallery-arrow-next">
+									<svg aria-hidden="true" width="5" height="11">
+										<use xlink:href="img/sprite.svg#arrow2"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="block-gallery__body">
+							<div class="block-gallery__slider swiper">
+								<div class="block-gallery__wrapper swiper-wrapper">
+									<div class="block-gallery__slide slide-block-gallery swiper-slide">
+										<div class="slide-block-gallery__images">
+											<div class="slide-block-gallery__slider swiper">
+												<div class="slide-block-gallery__wrapper swiper-wrapper">
+													<a href="img/image2.webp" data-fancybox="gallery1" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image2.webp" alt="">
+													</a>
+													<a href="img/image2.webp" data-fancybox="gallery1" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image2.webp" alt="">
+													</a>
+													<a href="img/image2.webp" data-fancybox="gallery1" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image2.webp" alt="">
+													</a>
+													<a href="img/image2.webp" data-fancybox="gallery1" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image2.webp" alt="">
+													</a>
+													<a href="img/image2.webp" data-fancybox="gallery1" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image2.webp" alt="">
+													</a>
+												</div>
+											</div>
+											<div class="slide-block-gallery__zoom">
+												<svg aria-hidden="true" width="24" height="24">
+													<use xlink:href="img/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__arrow-prev slider-nav-arrow slide-block-gallery-arrow-prev">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__pagination slide-block-gallery-pagination">
+											</div>
+											<div class="slider-nav__arrow-next slider-nav-arrow slide-block-gallery-arrow-next">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="slide-block-gallery__body">
+											<div class="slide-block-gallery__titles">
+												<div class="slide-block-gallery__text">
+													ЖК Level Причальный • Москва
+												</div>
+												<div class="slide-block-gallery__title">
+													Максим: «Важно, чтобы дома было<br>
+													хорошо каждому»
+												</div>
+											</div>
+											<div class="slide-block-gallery__descr1">
+												<ul>
+													<li>
+														<div class="slide-block-gallery__name">
+															Задача:
+														</div>
+														<p>
+															Создать функциональное пространство для семьи с двумя детьми,
+															где у каждого есть свой «уголок» в общей детской.
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Решение:
+														</div>
+														<p>
+															Зонирование детской комнаты, продуманная эргономика хранения,
+															выбор экологичных материалов.
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Результат:
+														</div>
+														<p>
+															Мы создали красивый интерьер, в котором удалось гармонично
+															совместить личные границы членов семьи и единство стиля.
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__descr2">
+												<ul>
+													<li>
+														<span>78 м²</span>
+														площадь
+													</li>
+													<li>
+														<span>120 дней</span>
+														реализация
+													</li>
+													<li>
+														<span>Стандарт</span>
+														выбранный тариф
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__buttons">
+												<a href="./" class="btn btn-brown">
+													<span class="desc">Смотреть документацию проекта</span>
+													<span class="mob">Документация проекта</span>
+												</a>
+												<a href="./" data-popup="descr-gallery" class="btn btn-grey">Описание</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-gallery__slide slide-block-gallery swiper-slide">
+										<div class="slide-block-gallery__images">
+											<div class="slide-block-gallery__slider swiper">
+												<div class="slide-block-gallery__wrapper swiper-wrapper">
+													<a href="img/image3.webp" data-fancybox="gallery2" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image3.webp" alt="">
+													</a>
+													<a href="img/image3.webp" data-fancybox="gallery2" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image3.webp" alt="">
+													</a>
+													<a href="img/image3.webp" data-fancybox="gallery2" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image3.webp" alt="">
+													</a>
+													<a href="img/image3.webp" data-fancybox="gallery2" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image3.webp" alt="">
+													</a>
+													<a href="img/image3.webp" data-fancybox="gallery2" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image3.webp" alt="">
+													</a>
+												</div>
+											</div>
+											<div class="slide-block-gallery__zoom">
+												<svg aria-hidden="true" width="24" height="24">
+													<use xlink:href="img/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__arrow-prev slider-nav-arrow slide-block-gallery-arrow-prev">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__pagination slide-block-gallery-pagination">
+											</div>
+											<div class="slider-nav__arrow-next slider-nav-arrow slide-block-gallery-arrow-next">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="slide-block-gallery__body">
+											<div class="slide-block-gallery__titles">
+												<div class="slide-block-gallery__text">
+													ЖК Цветочные поляны • Москва
+												</div>
+												<div class="slide-block-gallery__title">
+													Юрий: «хочу интерьер с изюминкой<br>
+													и в темных тонах»
+												</div>
+											</div>
+											<div class="slide-block-gallery__descr1">
+												<ul>
+													<li>
+														<div class="slide-block-gallery__name">
+															Задача:
+														</div>
+														<p>
+															Создать стильный и функциональный интерьер
+															для успешного шеф-повара, который часто принимает гостей.
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Решение:
+														</div>
+														<p>
+															Сделали акцент на брутальной каменной стене и добавили много
+															скрытых систем хранения для идеального порядка.
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Результат:
+														</div>
+														<p>
+															У нас получилось эффектное и очень удобное пространство. Полное
+															взаимопонимание с заказчиком позволило реализовать задуманное
+															быстро и легко.
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__descr2">
+												<ul>
+													<li>
+														<span>48 м²</span>
+														площадь
+													</li>
+													<li>
+														<span>27 дней</span>
+														реализация
+													</li>
+													<li>
+														<span>Стандарт</span>
+														выбранный тариф
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__buttons">
+												<a href="./" class="btn btn-brown">
+													<span class="desc">Смотреть документацию проекта</span>
+													<span class="mob">Документация проекта</span>
+												</a>
+												<a href="./" data-popup="descr-gallery" class="btn btn-grey">Описание</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-gallery__slide slide-block-gallery swiper-slide">
+										<div class="slide-block-gallery__images">
+											<div class="slide-block-gallery__slider swiper">
+												<div class="slide-block-gallery__wrapper swiper-wrapper">
+													<a href="img/image4.webp" data-fancybox="gallery3" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image4.webp" alt="">
+													</a>
+													<a href="img/image4.webp" data-fancybox="gallery3" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image4.webp" alt="">
+													</a>
+													<a href="img/image4.webp" data-fancybox="gallery3" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image4.webp" alt="">
+													</a>
+													<a href="img/image4.webp" data-fancybox="gallery3" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image4.webp" alt="">
+													</a>
+													<a href="img/image4.webp" data-fancybox="gallery3" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image4.webp" alt="">
+													</a>
+												</div>
+											</div>
+											<div class="slide-block-gallery__zoom">
+												<svg aria-hidden="true" width="24" height="24">
+													<use xlink:href="img/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__arrow-prev slider-nav-arrow slide-block-gallery-arrow-prev">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__pagination slide-block-gallery-pagination">
+											</div>
+											<div class="slider-nav__arrow-next slider-nav-arrow slide-block-gallery-arrow-next">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="slide-block-gallery__body">
+											<div class="slide-block-gallery__titles">
+												<div class="slide-block-gallery__text">
+													ЖК Селигер Сити • Москва
+												</div>
+												<div class="slide-block-gallery__title">
+													Анна: «мне важно, чтобы моя квартира<br>
+													отражала моё внутреннее состояние»
+												</div>
+											</div>
+											<div class="slide-block-gallery__descr1">
+												<ul>
+													<li>
+														<div class="slide-block-gallery__name">
+															Задача:
+														</div>
+														<p>
+															Этот проект создавался для студентки курса дизайна одежды из
+															МГУТУ им. К. Г. Разумовского. Главная цель — превратить
+															небольшую студию в отражение творческого «я» владелицы
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Решение:
+														</div>
+														<p>
+															Работа на сочетании глубоких цветов и выразительных фактур;
+															интеграция акцентных деталей
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Результат:
+														</div>
+														<p>
+															Мы закрыли все функциональные потребности, создав стильный
+															интерьер, который вдохновляет на творчество каждый день.
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__descr2">
+												<ul>
+													<li>
+														<span>36 м²</span>
+														площадь
+													</li>
+													<li>
+														<span>68 дней</span>
+														реализация
+													</li>
+													<li>
+														<span>Стандарт</span>
+														выбранный тариф
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__buttons">
+												<a href="./" class="btn btn-brown">
+													<span class="desc">Смотреть документацию проекта</span>
+													<span class="mob">Документация проекта</span>
+												</a>
+												<a href="./" data-popup="descr-gallery" class="btn btn-grey">Описание</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-gallery__slide slide-block-gallery swiper-slide">
+										<div class="slide-block-gallery__images">
+											<div class="slide-block-gallery__slider swiper">
+												<div class="slide-block-gallery__wrapper swiper-wrapper">
+													<a href="img/image5.webp" data-fancybox="gallery4" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image5.webp" alt="">
+													</a>
+													<a href="img/image5.webp" data-fancybox="gallery4" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image5.webp" alt="">
+													</a>
+													<a href="img/image5.webp" data-fancybox="gallery4" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image5.webp" alt="">
+													</a>
+													<a href="img/image5.webp" data-fancybox="gallery4" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image5.webp" alt="">
+													</a>
+													<a href="img/image5.webp" data-fancybox="gallery4" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image5.webp" alt="">
+													</a>
+												</div>
+											</div>
+											<div class="slide-block-gallery__zoom">
+												<svg aria-hidden="true" width="24" height="24">
+													<use xlink:href="img/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__arrow-prev slider-nav-arrow slide-block-gallery-arrow-prev">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__pagination slide-block-gallery-pagination">
+											</div>
+											<div class="slider-nav__arrow-next slider-nav-arrow slide-block-gallery-arrow-next">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="slide-block-gallery__body">
+											<div class="slide-block-gallery__titles">
+												<div class="slide-block-gallery__text">
+													ЖК Городские Истории • Москва
+												</div>
+												<div class="slide-block-gallery__title">
+													Анна: «Главное- комфорт всей семьи и удобная
+													кухня-гостиная»
+												</div>
+											</div>
+											<div class="slide-block-gallery__descr1">
+												<ul>
+													<li>
+														<div class="slide-block-gallery__name">
+															Задача:
+														</div>
+														<p>
+															Создать красивый интерьер для всей семьи; разработать интерьеры
+															детских, отражающие личность каждого ребенка; грамотно
+															разграничить санузлы и постирочную.
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Решение:
+														</div>
+														<p>
+															Индивидуальный подход к каждой комнате, функциональное
+															зонирование мокрых зон
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Результат:
+														</div>
+														<p>
+															Мы смогли понять пожелания каждого члена семьи и учесть их в
+															дизайн-проекте для создания идеального пррстранства
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__descr2">
+												<ul>
+													<li>
+														<span>87 м²</span>
+														площадь
+													</li>
+													<li>
+														<span>114 дней</span>
+														реализация
+													</li>
+													<li>
+														<span>Максимум</span>
+														выбранный тариф
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__buttons">
+												<a href="./" class="btn btn-brown">
+													<span class="desc">Смотреть документацию проекта</span>
+													<span class="mob">Документация проекта</span>
+												</a>
+												<a href="./" data-popup="descr-gallery" class="btn btn-grey">Описание</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-gallery__slide slide-block-gallery swiper-slide">
+										<div class="slide-block-gallery__images">
+											<div class="slide-block-gallery__slider swiper">
+												<div class="slide-block-gallery__wrapper swiper-wrapper">
+													<a href="img/image6.webp" data-fancybox="gallery5" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image6.webp" alt="">
+													</a>
+													<a href="img/image6.webp" data-fancybox="gallery5" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image6.webp" alt="">
+													</a>
+													<a href="img/image6.webp" data-fancybox="gallery5" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image6.webp" alt="">
+													</a>
+													<a href="img/image5.webp" data-fancybox="gallery5" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image6.webp" alt="">
+													</a>
+													<a href="img/image6.webp" data-fancybox="gallery5" class="slide-block-gallery__slide swiper-slide">
+														<img loading="lazy" src="img/image6.webp" alt="">
+													</a>
+												</div>
+											</div>
+											<div class="slide-block-gallery__zoom">
+												<svg aria-hidden="true" width="24" height="24">
+													<use xlink:href="img/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__arrow-prev slider-nav-arrow slide-block-gallery-arrow-prev">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+											<div class="slider-nav__pagination slide-block-gallery-pagination">
+											</div>
+											<div class="slider-nav__arrow-next slider-nav-arrow slide-block-gallery-arrow-next">
+												<svg aria-hidden="true" width="5" height="11">
+													<use xlink:href="img/sprite.svg#arrow2"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="slide-block-gallery__body">
+											<div class="slide-block-gallery__titles">
+												<div class="slide-block-gallery__text">
+													Салон «Форма Т» • Москва
+												</div>
+												<div class="slide-block-gallery__title">
+													Светлана: «Клиенты должны чувствовать<br>
+													уют и профессионализм»
+												</div>
+											</div>
+											<div class="slide-block-gallery__descr1">
+												<ul>
+													<li>
+														<div class="slide-block-gallery__name">
+															Задача:
+														</div>
+														<p>
+															Создать эстетичное пространство, вызывающее доверие и желание
+															возвращаться на процедуры 
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Решение:
+														</div>
+														<p>
+															Эргономичная планировка (зонирование мебели и мокрых точек),
+															подбор мебели; продуманное световое решение 
+														</p>
+													</li>
+													<li>
+														<div class="slide-block-gallery__name">
+															Результат:
+														</div>
+														<p>
+															Популярный салон с атмосферой, располагающей к бьюти-процедурам,
+															релаксу и желанию вернуться снова 
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__descr2">
+												<ul>
+													<li>
+														<span>123 м²</span>
+														площадь
+													</li>
+													<li>
+														<span>128 дней</span>
+														реализация
+													</li>
+													<li>
+														<span>Максимум</span>
+														выбранный тариф
+													</li>
+												</ul>
+											</div>
+											<div class="slide-block-gallery__buttons">
+												<a href="./" class="btn btn-brown">
+													<span class="desc">Смотреть документацию проекта</span>
+													<span class="mob">Документация проекта</span>
+												</a>
+												<a href="./" data-popup="descr-gallery" class="btn btn-grey">Описание</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -667,6 +1356,7 @@
 		</div>
 		<script src="js/swiper-10.2.0.min.js"></script>
 		<script src="js/dynamic_adapt.js"></script>
+		<script src="js/fancybox.umd.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 

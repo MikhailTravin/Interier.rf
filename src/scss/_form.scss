@@ -2,6 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    @media (max-width: 650px) {
+        gap: 16px 24px;
+    }
+    @media (max-width: 390px) {
+        gap: 10px;
+        flex-direction: column;
+    }
     // .options__item
 
     &__item {
@@ -9,6 +16,10 @@
         position: relative;
         cursor: pointer;
         min-width: 80px;
+        @media (max-width: 650px) {
+            min-width: fit-content;
+            flex: 1 1 calc(50% - 24px);
+        }
     }
 
     // .options__input
@@ -29,7 +40,7 @@
         &:checked + .options__label .options__price {
             color: #ffffff;
         }
-        &:checked + .options__label .options__info-icon svg {
+        &:checked + .options__label .block-info__icon svg {
             fill: #cdb2b8;
         }
     }
@@ -49,6 +60,9 @@
             background-color 0.3s,
             border 0.3s,
             color 0.3s;
+        @media (max-width: 650px) {
+            padding: 10px 5px;
+        }
     }
 
     // .options__check
@@ -64,6 +78,9 @@
         right: 7px;
         svg {
             fill: #fff;
+        }
+        @media (max-width: 650px) {
+            display: none;
         }
     }
 
@@ -88,6 +105,9 @@
         svg {
             fill: #333;
             transition: fill 0.3s;
+        }
+        @media (max-width: 650px) {
+            display: none;
         }
     }
 
@@ -115,11 +135,6 @@
         }
     }
 
-    // .options__text
-
-    &__text {
-    }
-
     // .options__bottom
 
     &__bottom {
@@ -127,6 +142,9 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        @media (max-width: 650px) {
+            display: none;
+        }
     }
 
     // .options__price
@@ -137,60 +155,84 @@
         line-height: 100%;
         color: #5b2431;
         transition: color 0.3s;
-    }
-
-    // .options__info
-
-    &__info {
-        position: relative;
-        &:hover,
-        &.active {
-            .options__info-text {
-                opacity: 1;
-                pointer-events: auto;
-            }
+        @media (max-width: 650px) {
+            display: none;
         }
-    }
-
-    // .options__info-icon
-
-    &__info-icon {
-        width: 18px;
-        height: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        svg {
-            fill: #d6d6d6;
-            transition: fill 0.3s;
-        }
-    }
-
-    // .options__info-text
-
-    &__info-text {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        font-size: 12px;
-        line-height: 110%;
-        color: var(--color-black);
-        background-color: #d6d6d6;
-        border-radius: 8px;
-        padding: 5px;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-        z-index: 10;
     }
 }
 .options-package {
     display: grid;
     gap: 10px 20px;
     grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 650px) {
+        gap: 16px 24px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 390px) {
+        gap: 10px;
+        flex-direction: column;
+    }
     .options__label {
         padding: 5px 10px 8px 14px;
         gap: 12px;
+        @media (max-width: 650px) {
+            justify-content: center;
+            align-items: center;
+            padding: 10px 5px;
+        }
+    }
+}
+
+.checkbox {
+    // .checkbox__input
+
+    &__input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        &:checked + .checkbox__label .checkbox__icon {
+            background-color: #5b2431;
+            border: 1px solid transparent;
+        }
+        &:checked + .checkbox__label .checkbox__icon svg {
+            opacity: 1;
+        }
+    }
+
+    // .checkbox__label
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    // .checkbox__icon
+
+    &__icon {
+        border: 1px solid #d6d6d6;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 20px;
+        width: 20px;
+        height: 20px;
+        svg {
+            fill: #ffffff;
+        }
+    }
+
+    // .checkbox__text
+
+    &__text {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 121%;
     }
 }
