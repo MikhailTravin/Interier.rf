@@ -323,3 +323,48 @@ function pageNavigation() {
   }
 }
 pageNavigation();
+
+//========================================================================================================================================================
+
+const optionsInfoIcons = document.querySelectorAll('.options__info-icon');
+
+if (optionsInfoIcons) {
+  function isMobile() {
+    return window.innerWidth <= 992;
+  }
+
+  optionsInfoIcons.forEach(icon => {
+    icon.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      if (!isMobile()) return;
+
+      const currentParent = this.closest('.options__info');
+
+      const isActive = currentParent.classList.contains('active');
+
+      document.querySelectorAll('.options__info.active').forEach(el => {
+        if (el !== currentParent) {
+          el.classList.remove('active');
+        }
+      });
+
+      if (isActive) {
+        currentParent.classList.remove('active');
+      } else {
+        currentParent.classList.add('active');
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!isMobile()) return;
+
+    const target = e.target.closest('.options__info');
+    if (!target) {
+      document.querySelectorAll('.options__info.active').forEach(el => {
+        el.classList.remove('active');
+      });
+    }
+  });
+}

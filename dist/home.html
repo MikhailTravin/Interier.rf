@@ -28,7 +28,7 @@
 									<a href="./" data-goto=".block-benefits" data-goto-header>Преимущества</a>
 								</li>
 								<li>
-									<a href="./">Тарифы</a>
+									<a href="./" data-goto=".block-tariffs" data-goto-header>Тарифы</a>
 								</li>
 								<li>
 									<a href="./">Работы</a>
@@ -285,9 +285,245 @@
 									</li>
 								</ul>
 							</div>
-							<div class="block-calculator__right">
+							<form action="#" class="block-calc">
+								<div class="block-calc__left">
+									<div class="block-calc__column">
+										<div class="block-calc__top">
+											<div class="block-calc__title">
+												01 / Выберите тип объекта
+											</div>
+											<div id="type-object" class="block-calc__result-title">
+												Комм.помещение
+											</div>
+										</div>
+										<div class="options">
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="1" name="option1">
+												<span class="options__label">
+													<span class="options__check">
+														<svg aria-hidden="true" width="15" height="15">
+															<use xlink:href="img/sprite.svg#check2"></use>
+														</svg>
+													</span>
+													<span class="options__titles">
+														<span class="options__icon">
+															<svg aria-hidden="true" width="22" height="22">
+																<use xlink:href="img/sprite.svg#building1"></use>
+															</svg>
+														</span>
+														<span class="options__text">
+															Вторичка
+														</span>
+													</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="2" name="option1">
+												<span class="options__label">
+													<span class="options__check">
+														<svg aria-hidden="true" width="15" height="15">
+															<use xlink:href="img/sprite.svg#check2"></use>
+														</svg>
+													</span>
+													<span class="options__titles">
+														<span class="options__icon"></span>
+														<span class="options__text">
+															Дом
+														</span>
+													</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="3" name="option1">
+												<span class="options__label">
+													<span class="options__check">
+														<svg aria-hidden="true" width="15" height="15">
+															<use xlink:href="img/sprite.svg#check2"></use>
+														</svg>
+													</span>
+													<span class="options__titles">
+														<span class="options__icon">
+															<svg aria-hidden="true" width="22" height="22">
+																<use xlink:href="img/sprite.svg#building1"></use>
+															</svg>
+														</span>
+														<span class="options__text">
+															Новостройка
+														</span>
+													</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input hidden checked class="options__input" type="radio" value="3" name="option1">
+												<span class="options__label">
+													<span class="options__check">
+														<svg aria-hidden="true" width="15" height="15">
+															<use xlink:href="img/sprite.svg#check2"></use>
+														</svg>
+													</span>
+													<span class="options__titles">
+														<span class="options__icon">
+															<svg aria-hidden="true" width="22" height="22">
+																<use xlink:href="img/sprite.svg#building2"></use>
+															</svg>
+														</span>
+														<span class="options__text">
+															Комм. помещение
+														</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="block-calc__column block-calc-area">
+										<div class="block-calc__top">
+											<div class="block-calc__title">
+												02 / Введите площадь объекта
+											</div>
+										</div>
+										<div class="block-calc__inputs">
+											<div class="block-calc__input">
+												<input autocomplete="off" type="text" name="form[]" placeholder="120" value="120">
+												<span>м²</span>
+											</div>
+											<p>
+												Точную площадь возьмите из выписки или плана — от неё зависит цена
+											</p>
+										</div>
+									</div>
+									<div class="block-calc__column">
+										<div class="block-calc__top">
+											<div class="block-calc__title">
+												03 / Выберите пакет услуг
+											</div>
+											<div id="type-object" class="block-calc__result-title">
+												Максимальный/4 800 ₽/м²
+											</div>
+										</div>
+										<div class="options options-package">
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="1" name="option2">
+												<span class="options__label">
+													<span class="options__top">
+														<span class="options__text">
+															Эскизный
+														</span>
+														<span class="options__check">
+															<svg aria-hidden="true" width="15" height="15">
+																<use xlink:href="img/sprite.svg#check2"></use>
+															</svg>
+														</span>
+													</span>
+													<span class="options__bottom">
+														<span class="options__price">2 500 ₽/м²</span>
+														<span class="options__info">
+															<span class="options__info-icon">
+																<svg aria-hidden="true" width="15" height="15">
+																	<use xlink:href="img/sprite.svg#info"></use>
+																</svg>
+															</span>
+															<span class="options__info-text">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Molestias, neque.
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="2" name="option2">
+												<span class="options__label">
+													<span class="options__top">
+														<span class="options__text">
+															Рабочий
+														</span>
+														<span class="options__check">
+															<svg aria-hidden="true" width="15" height="15">
+																<use xlink:href="img/sprite.svg#check2"></use>
+															</svg>
+														</span>
+													</span>
+													<span class="options__bottom">
+														<span class="options__price">2 900 ₽/м²</span>
+														<span class="options__info">
+															<span class="options__info-icon">
+																<svg aria-hidden="true" width="15" height="15">
+																	<use xlink:href="img/sprite.svg#info"></use>
+																</svg>
+															</span>
+															<span class="options__info-text">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Molestias, neque.
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input hidden class="options__input" checked type="radio" value="3" name="option2">
+												<span class="options__label">
+													<span class="options__top">
+														<span class="options__text">
+															Максимальный
+														</span>
+														<span class="options__check">
+															<svg aria-hidden="true" width="15" height="15">
+																<use xlink:href="img/sprite.svg#check2"></use>
+															</svg>
+														</span>
+													</span>
+													<span class="options__bottom">
+														<span class="options__price">4 800 ₽/м²</span>
+														<span class="options__info">
+															<span class="options__info-icon">
+																<svg aria-hidden="true" width="15" height="15">
+																	<use xlink:href="img/sprite.svg#info"></use>
+																</svg>
+															</span>
+															<span class="options__info-text">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Molestias, neque.
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input hidden class="options__input" type="radio" value="4" name="option2">
+												<span class="options__label">
+													<span class="options__top">
+														<span class="options__text">
+															Стандарт
+														</span>
+														<span class="options__check">
+															<svg aria-hidden="true" width="15" height="15">
+																<use xlink:href="img/sprite.svg#check2"></use>
+															</svg>
+														</span>
+													</span>
+													<span class="options__bottom">
+														<span class="options__price">4 100 ₽/м²</span>
+														<span class="options__info">
+															<span class="options__info-icon">
+																<svg aria-hidden="true" width="15" height="15">
+																	<use xlink:href="img/sprite.svg#info"></use>
+																</svg>
+															</span>
+															<span class="options__info-text">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Molestias, neque.
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="block-calc__right">
 
-							</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
