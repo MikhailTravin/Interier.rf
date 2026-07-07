@@ -53,10 +53,7 @@ body::after {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: calc(100vh - 78px);
-    @media (max-width: 390px) {
-        height: calc(100vh - 40px);
-    }
+    min-height: 100%;
 }
 .popup__content {
     position: relative;
@@ -329,5 +326,14 @@ body::after {
     .slide-block-gallery__body {
         padding: 13px 16px 20px 16px;
         border-radius: 0 0 23px 23px;
+    }
+    .block-reviews__cards {
+        background: #fff;
+        border-radius: 0px 0px 23px 23px;
+    }
+    .card-review__text {
+        p {
+            display: flex;
+        }
     }
 }
